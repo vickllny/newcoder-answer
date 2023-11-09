@@ -54,23 +54,9 @@ public class BM13 {
     }
 
     public static void main(String[] args) {
-        ListNode root = buildListNode(new int[]{-1,-2,-3,-2,-1});
+        ListNode root = ListNode.buildListNode(new int[]{-1,-2,-3,-2,-1});
         System.out.println(isPail(root));
     }
 
-    static ListNode buildListNode(int[] number){
-        if(number == null || number.length == 0){
-            return null;
-        }
-        if(number.length == 1){
-            return new ListNode(number[0]);
-        }
-        ListNode root = new ListNode(number[0]);
-        ListNode tempNode = root;
-        for(int i = 1; i < number.length; i++){
-            tempNode.next = new ListNode(number[i]);
-            tempNode = tempNode.next;
-        }
-        return root;
-    }
+
 }
